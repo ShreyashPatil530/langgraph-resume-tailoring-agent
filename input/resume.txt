@@ -1,0 +1,24 @@
+Ananya Sharma | ananya@email.com | github.com/ananya
+
+PROFESSIONAL SUMMARY
+Backend developer with 2.5 years of experience building Python APIs and working
+with SQL databases in a fast-paced startup environment.
+
+EXPERIENCE
+Software Engineer | QuickTech Solutions | July 2022 - Present
+- Built REST APIs using Python and Flask serving 30,000 daily active users
+- Designed PostgreSQL schemas and wrote complex SQL queries for reporting
+- Wrote pytest unit tests achieving 78% code coverage
+- Integrated third-party APIs: Razorpay, Twilio, SendGrid
+- Deployed applications on AWS (EC2, S3, RDS) using basic CI/CD pipelines
+
+Junior Developer | WebAgency | Jan 2022 - June 2022
+- Built Django web applications for 3 client projects
+- Maintained MySQL databases and wrote data migration scripts
+
+SKILLS
+Python, Flask, Django, PostgreSQL, MySQL, REST APIs, pytest, Git, AWS (EC2, S3, RDS),
+Docker (basic), Linux, Razorpay integration, Twilio API
+
+EDUCATION
+B.Tech Computer Science | BITS Pilani | 2021 | CGPA 8.6/10

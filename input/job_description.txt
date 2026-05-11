@@ -1,0 +1,22 @@
+Backend Python Developer - Zepto (Fast Commerce Startup) | Bangalore
+Experience: 2-4 years
+
+Must Have:
+- Python development (production APIs, not just scripts)
+- Django or FastAPI (we use FastAPI primarily)
+- PostgreSQL - complex queries, schema design, optimization
+- REST API design - clean, versioned, documented
+- AWS basics (EC2, S3, RDS or DynamoDB)
+- Git, code reviews, Agile sprints
+
+Nice to Have:
+- Redis or caching experience
+- Docker and containerization
+- Experience with payment gateway integrations
+- Message queues (Kafka, RabbitMQ, SQS)
+
+Responsibilities:
+- Design and build scalable backend services for 10M+ daily order platform
+- Own database schema design and query optimization
+- Write comprehensive unit and integration tests
+- Participate actively in technical design discussions
