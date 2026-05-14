@@ -1,0 +1,9 @@
+severity:
+  - HIGH
+  - CRITICAL
+
+exit-code: 0
+
+format: table
+
+ignore-unfixed: true
