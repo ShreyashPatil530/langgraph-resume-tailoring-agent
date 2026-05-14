@@ -1,5 +1,7 @@
 node {
 
+    def localBin = '/var/jenkins_home/.local/bin'
+
     stage('Checkout') {
         checkout scm
     }
@@ -10,19 +12,19 @@ node {
     }
 
     stage('Lint - Ruff') {
-        sh 'ruff check . || true'
+        sh "${localBin}/ruff check . || true"
     }
 
     stage('Type Check - mypy') {
-        sh 'mypy agent/ monitoring/ prompts/ --ignore-missing-imports || true'
+        sh "${localBin}/mypy agent/ monitoring/ prompts/ --ignore-missing-imports || true"
     }
 
     stage('Security - Bandit') {
-        sh 'bandit -r agent/ monitoring/ prompts/ -ll || true'
+        sh "${localBin}/bandit -r agent/ monitoring/ prompts/ -ll || true"
     }
 
     stage('Dependency Audit') {
-        sh 'pip-audit -r requirements.txt || true'
+        sh "${localBin}/pip-audit -r requirements.txt || true"
     }
 
     stage('Dockerfile Lint - Hadolint') {
@@ -30,14 +32,14 @@ node {
     }
 
     stage('Tests with Coverage') {
-        sh 'pytest tests/ -v --cov=agent --cov=monitoring --cov=prompts --cov-report=xml:coverage.xml --cov-report=term-missing || true'
+        sh "${localBin}/pytest tests/ -v --cov=agent --cov=monitoring --cov=prompts --cov-report=xml:coverage.xml --cov-report=term-missing || true"
     }
 
     stage('SonarQube Analysis') {
         script {
             def scannerHome = tool 'SonarScanner'
             withSonarQubeEnv('SonarQube') {
-                sh "${scannerHome}/bin/sonar-scanner || true"
+                sh "${scannerHome}/bin/sonar-scanner -Dsonar.ws.timeout=300 || true"
             }
         }
     }
